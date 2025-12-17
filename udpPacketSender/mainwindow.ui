@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>520</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>UDP Sender</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+
+    <!-- Settings Group -->
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Sender Settings</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_ip">
+         <property name="text">
+          <string>Destination IP:</string>
+         </property>
+        </widget>
+       </item>
+
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="ipLineEdit"/>
+       </item>
+
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_port">
+         <property name="text">
+          <string>Port:</string>
+         </property>
+        </widget>
+       </item>
+
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="portSpinBox">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
+       </item>
+
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_size">
+         <property name="text">
+          <string>Initial Size:</string>
+         </property>
+        </widget>
+       </item>
+
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="sizeSpinBox">
+         <property name="maximum">
+          <number>65507</number>
+         </property>
+        </widget>
+       </item>
+
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_maxSize">
+         <property name="text">
+          <string>Max Size:</string>
+         </property>
+        </widget>
+       </item>
+
+       <item row="3" column="1">
+        <widget class="QSpinBox" name="maxSizeSpinBox">
+         <property name="maximum">
+          <number>65507</number>
+         </property>
+        </widget>
+       </item>
+
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_interval">
+         <property name="text">
+          <string>Interval (ms):</string>
+         </property>
+        </widget>
+       </item>
+
+       <item row="4" column="1">
+        <widget class="QSpinBox" name="intervalSpinBox">
+         <property name="maximum">
+          <number>60000</number>
+         </property>
+        </widget>
+       </item>
+
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_pattern">
+         <property name="text">
+          <string>Pattern (hex):</string>
+         </property>
+        </widget>
+       </item>
+
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="patternLineEdit"/>
+       </item>
+
+       <item row="6" column="0">
+        <widget class="QCheckBox" name="incSizeCheckBox">
+         <property name="text">
+          <string>Increase Size</string>
+         </property>
+        </widget>
+       </item>
+
+       <item row="7" column="0">
+        <widget class="QCheckBox" name="incContentCheckBox">
+         <property name="text">
+          <string>Increment Content</string>
+         </property>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+    </item>
+
+    <!-- Start / Stop Buttons -->
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="startButton">
+        <property name="text">
+         <string>Start</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stopButton">
+        <property name="text">
+         <string>Stop</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- Log Window -->
+    <item>
+     <widget class="QTextEdit" name="logTextEdit">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+
+  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QStatusBar" name="statusbar"/>
+
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
